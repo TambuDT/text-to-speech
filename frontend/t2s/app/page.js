@@ -10,9 +10,9 @@ export default function Home() {
     const checkUser = async () => {
       try {
         await account.get(); 
-        router.push("/dashboard"); // utente loggato → redirect
+        router.push("/dashboard"); // utente loggato vai alla dashboard
       } catch (error) {
-        router.push("/login"); // utente non loggato → redirect
+        router.push("/login"); // utente non loggato redirect alla login
       }
     };
 
