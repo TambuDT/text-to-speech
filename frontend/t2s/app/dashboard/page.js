@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { account } from "../appwrite/appwrite";
 import { useRouter } from "next/navigation";
 import PrivateRoute from "../hooks/PrivateRoute";
-
+import './dashboard.css'
 function Dashboard() {
   const router = useRouter();
   const [loggedInUser, setLoggedInUser] = useState(true); // o il tuo stato reale
@@ -20,8 +20,13 @@ function Dashboard() {
 
   return (
     <PrivateRoute>
-      <div>
-        <button onClick={logout}>Logout</button>
+      <div className="dashboard-container">
+        <nav className="navbar">
+          <ul>
+            <li>T2S</li>
+            <li>Powered by Google IA <div className="logout-button" onClick={logout}><label>Logout</label><i className="logout-icon fa-solid fa-arrow-right-from-bracket"></i></div></li>
+          </ul>
+        </nav>
       </div>
     </PrivateRoute>
   );

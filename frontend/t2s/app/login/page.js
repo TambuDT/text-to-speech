@@ -24,7 +24,7 @@ function LoginPage() {
   }, [router]);
 
   const handleSubmit = async (e) => {
-    e.preventDefault(); // evita il refresh della pagina
+    e.preventDefault();
     try {
       await account.createEmailPasswordSession({
         email,
