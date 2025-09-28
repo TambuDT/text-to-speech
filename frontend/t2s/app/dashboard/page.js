@@ -9,6 +9,7 @@ function Dashboard() {
     <PrivateRoute>
       <div className="dashboard-container">
         <Navbar  page="Dashboard"></Navbar>
+
       </div>
     </PrivateRoute>
   );

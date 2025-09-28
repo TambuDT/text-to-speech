@@ -1,9 +1,7 @@
 .dashboard-container {
     display: flex;
-    flex: 1;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
     flex-direction: column;
+    align-items: center;
     background-color: var(--section-background);
+    width: 100%;
 }

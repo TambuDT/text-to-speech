@@ -1,13 +1,15 @@
 
 .navbar{
-    position: absolute;
+    position: fixed;
     top: 0;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-     border-bottom: 1px solid var(--borders);
+    border-bottom: 1px solid var(--borders);
+    backdrop-filter: blur(10px);
+    background-color: #000000b9;
 }
 
 .navbar ul{
