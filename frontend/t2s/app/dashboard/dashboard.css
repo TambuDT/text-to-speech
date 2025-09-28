@@ -5,57 +5,5 @@
     justify-content: center;
     height: 100vh;
     flex-direction: column;
-}
-
-.navbar {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 60px; 
-    display: flex;
-    align-items: center; 
-    padding: 0 20px; 
-}
-
-.navbar ul {
-    display: flex;
-    justify-content: space-between; 
-    align-items: center; 
-    list-style: none;
-    width: 100%; 
-    padding: 0;
-    margin: 0;
-}
-
-.navbar ul li {
-    font-size: 18px;
-    padding: 10px 20px; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-}
-
-.logout-button {
-    width: 100px;
-    height: 30px;
-    margin-left: 20px;
-    background-color: #ff4d4d;
-    color: var(--background);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: row;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 14px;
-    font-weight: bold;
-}   
-.logout-button label{
-    margin-right: 8px;
-}
-.logout-icon {
-    color: var(--background);
+    background-color: var(--section-background);
 }
