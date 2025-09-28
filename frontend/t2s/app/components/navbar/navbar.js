@@ -2,7 +2,10 @@ import React, { useState } from 'react'
 import "./navbar.css"
 import { LuAudioWaveform } from "react-icons/lu";
 import { account } from '@/app/appwrite/appwrite';
+import { useRouter } from "next/navigation";
 function Navbar({ page }) {
+
+  const router = useRouter();
 
   const [loggedInUser, setLoggedInUser] = useState(true); // o il tuo stato reale
 
