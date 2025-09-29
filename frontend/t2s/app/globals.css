@@ -8,6 +8,7 @@
   --borders:#2c2c2c;
   --notselectedtext:#6e6e6e;
   --text:#fff;
+  --navbar-height: 80px;
 }
 
 @media (prefers-color-scheme: dark) {

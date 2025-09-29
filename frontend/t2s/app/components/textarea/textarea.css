@@ -1,0 +1,46 @@
+.textsection-container {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.text-section-title{
+    align-self: flex-start;
+}
+
+.text-section-subtitle {
+    margin-top: 5px;
+    align-self: flex-start;
+}
+
+.text-area {
+    margin-top: 40px;
+    width: 1000px;
+    height: 250px;
+    resize: none;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 18px;
+    color: var(--text);
+    font-family: "Ubuntu", sans-serif;
+    background-color: var(--lightdarkblue);
+}
+
+.text-area:focus {
+    outline: none;
+}
+
+.genera-button{
+    cursor: pointer;
+    background-color: var(--lightdarkblue);
+    border: 1px solid var(--lightdarkblue);
+    width: 150px;
+    height: 40px;
+    margin-top: 30px;
+    align-self: flex-end;
+    border-radius: 10px;
+    color: var(--logo);
+    font-size: 15px;
+}
