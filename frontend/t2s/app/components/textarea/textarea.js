@@ -5,12 +5,11 @@ import axios from 'axios';
 function Textsection() {
   const [text, setText] = useState('');
   const [audioSrc, setAudioSrc] = useState(null);
-  const pitch = 0;
-  const voiceName = "Gacrux";
+  const voiceName = "Zephyr";
 
   async function handleSynthesize() {
     try {
-      const response = await axios.post('http://localhost:3001/synthesize', { text, pitch, voiceName});
+      const response = await axios.post('http://localhost:3001/synthesize', { text, voiceName});
 
       if (response.data && response.data.audioContent) {
         const audioBase64 = response.data.audioContent;

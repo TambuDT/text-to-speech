@@ -15,7 +15,6 @@ app.use(
 app.post("/synthesize", async (req, res) => {
     try {
         const text = req.body.text;
-        const pitch = req.body.pitch;
         const voiceName = req.body.voiceName;
 
         const apiKey = process.env.TEXT2SPEECH_API_KEY;
@@ -25,8 +24,7 @@ app.post("/synthesize", async (req, res) => {
         const payload = {
             "audioConfig": {
                 "audioEncoding": "LINEAR16",
-                "pitch": pitch,
-                "speakingRate": 1
+                "speakingRate": 1.0,
             },
             "input": {
                 "text": text
