@@ -1,22 +1,24 @@
 import React, { useState } from 'react';
 import './textarea.css';
 import axios from 'axios';
+import { MdCancel } from "react-icons/md";
 
 function Textsection({ voiceName }) {
   const [text, setText] = useState('');
   const [audioSrc, setAudioSrc] = useState(null);
+  const [customPronunce, setCustomPronunce] = useState([]);
 
   async function handleSynthesize() {
     try {
       const response = await axios.post('http://localhost:3001/synthesize', {
         text,
         voiceName,
+        customPronunce,
       });
 
       if (response.data && response.data.audioContent) {
         const audioBase64 = response.data.audioContent;
-        const audioSrc = `data:audio/mp3;base64,${audioBase64}`;
-        setAudioSrc(audioSrc);
+        setAudioSrc(`data:audio/mp3;base64,${audioBase64}`);
       } else {
         console.error("Risposta senza audioContent:", response.data);
       }
@@ -25,10 +27,28 @@ function Textsection({ voiceName }) {
     }
   }
 
+  function addRow() {
+    setCustomPronunce(prev => [...prev, { parola: "", sostituzione: "" }]);
+  }
+
+  function updatePronunce(index, field, value) {
+    setCustomPronunce(prev => {
+      const copy = [...prev];
+      copy[index][field] = value;
+      return copy;
+    });
+  }
+
+  function removeRow(index) {
+    setCustomPronunce(prev => prev.filter((_, i) => i !== index));
+  }
+
   return (
     <div className='textsection-container'>
       <h1 className='text-section-title'>Text to Speech</h1>
-      <h4 className='text-section-subtitle'>Inserisci il testo da convertire in audio</h4>
+      <h4 className='text-section-subtitle'>
+        Inserisci il testo da convertire in audio
+      </h4>
 
       <textarea
         value={text}
@@ -37,18 +57,37 @@ function Textsection({ voiceName }) {
         placeholder='Inserisci il testo qui...'
       />
 
-      <h4 className='text-section-subtitle'>Aggiungi pronunce personalizzate utilizzando rappresentazioni fonetiche IPA o X-SAMPA</h4>
-
-      <div className='parole-custom-container'>
-
+      <div className='add-pronuncia-custom-title-container'>
+        <h4 className='text-section-subtitle'>
+          Aggiungi pronunce personalizzate utilizzando rappresentazioni fonetiche IPA o X-SAMPA
+        </h4>
+        <div className='add-pronuncia-button' onClick={addRow}><p>+</p></div>
       </div>
 
-      <button className={voiceName ? "genera-button" : "genera-button-non-disponibile"} onClick={handleSynthesize}>
-        {voiceName ? "Genera con voce " + voiceName : "Seleziona Una Voce"}
-      </button>
+      <div className='parole-custom-container'>
+        {customPronunce.map((item, idx) => (
+          <div key={idx} className='custom-pronuncia-row'>
+            <input
+              value={item.parola}
+              onChange={e => updatePronunce(idx, 'parola', e.target.value)}
+              placeholder='Parola'
+              className='custom-pronuncia-input'
+            />
+            <input
+              value={item.sostituzione}
+              onChange={e => updatePronunce(idx, 'sostituzione', e.target.value)}
+              placeholder='Sostituzione'
+              className='custom-pronuncia-input'
+            />
+            <div className='remove-pronuncia-button' onClick={() => removeRow(idx)}><MdCancel /></div>
+          </div>
+        ))}
+      </div>
+
+      <button className={voiceName ? "genera-button" : "genera-button-non-disponibile"} onClick={handleSynthesize}> {voiceName ? "Genera con voce " + voiceName : "Seleziona Una Voce"} </button>
 
       {<audio className='player-audio-generato' controls src={audioSrc} />}
-    </div>
+    </div >
   );
 }
 

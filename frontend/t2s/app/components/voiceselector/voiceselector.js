@@ -51,6 +51,7 @@ export function VoiceSelector({ onVoiceChange }) {
   return (
     <div className='musicpicker-container'>
       <h2 className='music-section-title'>Selezione voci</h2>
+      <h4 className='music-section-subtitle'>Clicca su una voce per selezionarla</h4>
       <div className='music-list-container'>
         {arrayVoci.map((voce) => (
           <div

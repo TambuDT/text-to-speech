@@ -62,17 +62,82 @@
 .parole-custom-container {
     width: 1000px;
     height: 250px;
+    overflow-y: scroll;
+    scrollbar-width: none;
     resize: none;
     border: none;
     border-radius: 10px;
-    padding: 20px;
     font-size: 18px;
     color: var(--text);
     font-family: "Ubuntu", sans-serif;
-    background-color: var(--lightdarkblue);
     margin-bottom: 40px;
+    border: 1px solid var(--lightdarkblue);
 }
 
 .player-audio-generato {
     align-self: flex-start;
+}
+
+.add-pronuncia-custom-title-container {
+    align-self: flex-start;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    width: 1000px;
+}
+
+.add-pronuncia-button {
+    align-self: center;
+    justify-self: center;
+    margin-top: 15px;
+    margin-left: 10px;
+    border-radius: 10px;
+    width: 30px;
+    height: 30px;
+    background-color: var(--logo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.add-pronuncia-button p {
+    font-size: 20px;
+    color: var(--text);
+}
+
+.remove-pronuncia-button {
+    background-color: var(--logo);
+    color: var(--text);
+    width: 30px;
+    height: 30px;
+    border: none;
+    border-radius: 100px;
+    text-align: center;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.custom-pronuncia-row {
+    background-color: var(--lightdarkblue);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 5px;
+    border-radius: 10px;
+}
+
+.custom-pronuncia-input {
+    background-color: transparent;
+    border: none;
+    width: 300px;
+    height: 40px;
+    padding: 10px;
+    font-size: 15px;
+}
+.custom-pronuncia-input:focus{
+    outline: none;
 }
