@@ -13,8 +13,8 @@ const arrayVoci = [
 
 export function VoiceSelector({ onVoiceChange }) {
   const [selectedVoice, setSelectedVoice] = useState(null);
-  const [playingVoice, setPlayingVoice] = useState(null); // quale voce sta suonando
-  const audioRefs = useRef({}); // ref per ogni audio
+  const [playingVoice, setPlayingVoice] = useState(null);
+  const audioRefs = useRef({});
 
   const handleSelect = (voce) => {
     setSelectedVoice(voce);
@@ -25,7 +25,7 @@ export function VoiceSelector({ onVoiceChange }) {
     const audio = audioRefs.current[voce];
     if (!audio) return;
 
-    // ferma eventuali audio in riproduzione diversi da quello cliccato
+
     Object.keys(audioRefs.current).forEach((v) => {
       if (v !== voce && audioRefs.current[v]) {
         audioRefs.current[v].pause();
@@ -41,7 +41,7 @@ export function VoiceSelector({ onVoiceChange }) {
     }
   };
 
-  // gestisci cambio stato quando l'audio finisce
+
   const handleEnded = (voce) => {
     if (playingVoice === voce) {
       setPlayingVoice(null);
@@ -61,18 +61,17 @@ export function VoiceSelector({ onVoiceChange }) {
           >
             <p className='music-name'>{voce}</p>
 
-            {/* audio invisibile */}
             <audio
               ref={(el) => (audioRefs.current[voce] = el)}
               src={`https://cloud.google.com/text-to-speech/docs/audio/it-IT-Chirp3-HD-${voce}.wav`}
               onEnded={() => handleEnded(voce)}
             />
 
-            {/* pulsante play/pause con icona */}
+
             <div
               className='play-pause-btn'
               onClick={(e) => {
-                e.stopPropagation(); // evita di selezionare la voce quando clicchi sul pulsante
+                e.stopPropagation(); 
                 handlePlayPause(voce);
               }}
             >
