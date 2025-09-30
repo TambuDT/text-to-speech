@@ -5,17 +5,18 @@
     justify-content: center;
     flex-direction: column;
 }
-.text-section-title{
+
+.text-section-title {
     align-self: flex-start;
 }
 
 .text-section-subtitle {
-    margin-top: 5px;
     align-self: flex-start;
+    margin-top: 40px;
+    margin-bottom: 20px;
 }
 
 .text-area {
-    margin-top: 40px;
     width: 1000px;
     height: 250px;
     resize: none;
@@ -32,15 +33,46 @@
     outline: none;
 }
 
-.genera-button{
+.genera-button {
     cursor: pointer;
     background-color: var(--lightdarkblue);
     border: 1px solid var(--lightdarkblue);
-    width: 150px;
+    width: 230px;
     height: 40px;
     margin-top: 30px;
     align-self: flex-end;
     border-radius: 10px;
     color: var(--logo);
     font-size: 15px;
+}
+
+.genera-button-non-disponibile {
+    pointer-events: none;
+    background-color: var(--notselectedtext);
+    border: 1px solid var(--lightdarkblue);
+    width: 230px;
+    height: 40px;
+    margin-top: 30px;
+    align-self: flex-end;
+    border-radius: 10px;
+    color: var(--section-background);
+    font-size: 15px;
+}
+
+.parole-custom-container {
+    width: 1000px;
+    height: 250px;
+    resize: none;
+    border: none;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 18px;
+    color: var(--text);
+    font-family: "Ubuntu", sans-serif;
+    background-color: var(--lightdarkblue);
+    margin-bottom: 40px;
+}
+
+.player-audio-generato {
+    align-self: flex-start;
 }

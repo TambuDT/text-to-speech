@@ -3,6 +3,7 @@
     height: 400px;
     display: flex;
     flex-direction: column;
+    align-self: flex-start;
 }
 
 .music-section-title {
@@ -45,4 +46,23 @@
   width: 200px;
   outline: none;
   border-radius: 6px;
+}
+
+.music-item.selected {
+  background: var(--lightdarkblue);
+}
+
+.play-pause-btn{
+  background-color: var(--logo);
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.play-pause-btn *{
+  font-size: 12px;
 }

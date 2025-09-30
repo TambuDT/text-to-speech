@@ -11,23 +11,23 @@
     font-size: 1.8rem;
     font-weight: 700;
     margin-bottom: 5px;
-    color:rgb(96,191,152);
+    color: var(--logo);
 }
 
 .login-text {
     font-size: 0.95rem;
     font-weight: 400;
-    color: rgb(114,125,124);
+    color: rgb(114, 125, 124);
     margin-bottom: 15px;
 }
 
 .input-field {
     border: none;
-    border-bottom: 1px solid rgb(176,202,196);
+    border-bottom: 1px solid rgb(176, 202, 196);
     background-color: transparent;
     padding: 12px;
     font-size: 0.95rem;
-    color: rgb(96,191,152);
+    color: var(--text);
     outline: none;
     transition: all 0.25s ease;
 }
@@ -38,33 +38,33 @@
 
 .input-field:focus {
     border: none;
-    border-bottom: 1px solid rgb(96,191,152);
+    border-bottom: 1px solid var(--logo);
 }
 
 .button {
     background-color: transparent;
-    border: 1px solid rgb(96,191,152);
+    border: 1px solid var(--logo);
     border-radius: 10px;
     padding: 12px;
     font-size: 1rem;
     font-weight: 600;
-    color: rgb(96,191,152);
+    color: var(--logo);
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
 .button:hover {
-    background-color: rgb(96,191,152);
-    border: 1px solid rgb(96,191,152);
-    color:rgb(5,14,14);
+    background-color: var(--logo);
+    border: 1px solid var(--logo);
+    color: rgb(5, 14, 14);
 }
 
 .footer-text {
     font-size: 0.85rem;
     text-align: center;
-    color: rgb(114,125,124);
+    color: var(--notselectedtex)
 }
 
 .t2s-mini-logo {
-    color: rgb(96,191,152);
+    color: var(--logo);
 }

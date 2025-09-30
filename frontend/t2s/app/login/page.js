@@ -63,7 +63,7 @@ function LoginPage() {
       <button className='button' type="submit">Login</button>
 
       <p className="footer-text">
-        <label className='t2s-mini-logo'>T2S</label> Text-to-Speech
+        <label className='t2s-mini-logo'>AudioGen</label> Text-to-Speech
       </p>
     </form>
   );
