@@ -17,7 +17,7 @@ app.post("/synthesize", async (req, res) => {
         
         const apiKey = process.env.TEXT2SPEECH_API_KEY;
 
-        const endpoint = `https://texttospeech.googleapis.com/v1/text:synthesize?key=${apiKey}`;
+        const endpoint = `https://texttospeech.googleapis.com/v1beta1/text:synthesize?key=${apiKey}`;
         
         const payload = req.body;
 
