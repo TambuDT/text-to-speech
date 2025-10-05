@@ -25,7 +25,6 @@ export function VoiceSelector({ onVoiceChange }) {
     const audio = audioRefs.current[voce];
     if (!audio) return;
 
-
     Object.keys(audioRefs.current).forEach((v) => {
       if (v !== voce && audioRefs.current[v]) {
         audioRefs.current[v].pause();

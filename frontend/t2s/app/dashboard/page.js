@@ -4,7 +4,7 @@ import PrivateRoute from "../hooks/PrivateRoute";
 
 import './dashboard.css'
 import Navbar from "../components/navbar/navbar";
-import Textsection from "../components/textarea/textarea";
+import Textsection from "../components/textarea/textarea2";
 import { VoiceSelector } from "../components/voiceselector/voiceselector"
 
 function Dashboard() {

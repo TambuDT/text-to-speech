@@ -138,6 +138,32 @@
     padding: 10px;
     font-size: 15px;
 }
-.custom-pronuncia-input:focus{
+
+.custom-pronuncia-input:focus {
     outline: none;
+}
+
+.pronuncia-button-conteiner {
+    display: flex;
+    flex-direction: row;
+    width: 150px;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.type-pronuncia-button {
+    background-color: var(--section-background);
+    color: var(--text);
+    width: 40px;
+    height: 30px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.type-pronuncia-button.selected {
+    background-color: var(--logo);
+    color: white;
+    border-color: #007bff;
 }

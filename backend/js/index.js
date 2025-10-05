@@ -14,26 +14,12 @@ app.use(
 
 app.post("/synthesize", async (req, res) => {
     try {
-        const text = req.body.text;
-        const voiceName = req.body.voiceName;
-
+        
         const apiKey = process.env.TEXT2SPEECH_API_KEY;
 
         const endpoint = `https://texttospeech.googleapis.com/v1/text:synthesize?key=${apiKey}`;
-
-        const payload = {
-            "audioConfig": {
-                "audioEncoding": "LINEAR16",
-                "speakingRate": 1.0,
-            },
-            "input": {
-                "text": text
-            },
-            "voice": {
-                "languageCode": "it-IT",
-               "name": `it-IT-Chirp3-HD-${voiceName}`
-            }
-        };
+        
+        const payload = req.body;
 
         const response = await axios.post(endpoint, payload);
 
