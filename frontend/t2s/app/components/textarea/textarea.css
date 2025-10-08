@@ -24,9 +24,9 @@
     border-radius: 10px;
     padding: 20px;
     font-size: 18px;
-    color: var(--text);
+    color: var(--clr-light-a0);
     font-family: "Ubuntu", sans-serif;
-    background-color: var(--lightdarkblue);
+    background-color: var(--clr-surface-tonal-a0);
 }
 
 .text-area:focus {
@@ -35,27 +35,27 @@
 
 .genera-button {
     cursor: pointer;
-    background-color: var(--lightdarkblue);
-    border: 1px solid var(--lightdarkblue);
+    background-color: var(--clr-success-a20);
+    border: 1px solid var(--clr-success-a20);
     width: 230px;
     height: 40px;
     margin-top: 30px;
     align-self: flex-end;
     border-radius: 10px;
-    color: var(--logo);
+    color: var(--clr-dark-a0);
     font-size: 15px;
 }
 
 .genera-button-non-disponibile {
     pointer-events: none;
-    background-color: var(--notselectedtext);
-    border: 1px solid var(--lightdarkblue);
+    background-color: var(--clr-warning-a20);
+    border: 1px solid var(--clr-dark-a0);
     width: 230px;
     height: 40px;
     margin-top: 30px;
     align-self: flex-end;
     border-radius: 10px;
-    color: var(--section-background);
+    color: var(--clr-dark-a0);
     font-size: 15px;
 }
 
@@ -71,7 +71,7 @@
     color: var(--text);
     font-family: "Ubuntu", sans-serif;
     margin-bottom: 40px;
-    border: 1px solid var(--lightdarkblue);
+    border: 1px solid var(--clr-surface-a10);
 }
 
 .player-audio-generato {
@@ -91,36 +91,36 @@
     justify-self: center;
     margin-top: 15px;
     margin-left: 10px;
-    border-radius: 10px;
+    border-radius: 100px;
     width: 30px;
     height: 30px;
-    background-color: var(--logo);
+    background-color: var(--clr-success-a0);
+    color: var(--clr-success-a20);
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .add-pronuncia-button p {
-    font-size: 20px;
-    color: var(--text);
+    font-size: 30px;
 }
 
 .remove-pronuncia-button {
-    background-color: var(--logo);
-    color: var(--text);
+    background-color: var(--clr-danger-a20);
+    color: var(--clr-danger-a0);
     width: 30px;
     height: 30px;
     border: none;
     border-radius: 100px;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .custom-pronuncia-row {
-    background-color: var(--lightdarkblue);
+    background-color: var(--clr-surface-a10);
     height: 50px;
     display: flex;
     align-items: center;
@@ -131,6 +131,7 @@
 }
 
 .custom-pronuncia-input {
+    color: var(--clr-light-a0);
     background-color: transparent;
     border: none;
     width: 300px;

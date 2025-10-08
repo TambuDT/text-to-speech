@@ -96,7 +96,7 @@ function Textsection({ voiceName }) {
             <input
               value={item.sostituzione}
               onChange={e => updatePronunce(idx, 'sostituzione', e.target.value)}
-              placeholder='Pronuncia da leggere'
+              placeholder='Pronuncia'
               className='custom-pronuncia-input'
             />
             <div className='remove-pronuncia-button' onClick={() => removeRow(idx)}>

@@ -23,7 +23,7 @@ function Navbar({ page }) {
   return (
     <nav className="navbar">
       <ul>
-        <li className="nav-logo"><LuAudioWaveform className="nav-mini-logo" /> <label>AudioGen</label></li>
+        <li className="nav-logo"><LuAudioWaveform className="nav-mini-logo" /><label className='nav-logo-text'>AudioGen</label></li>
         <ul className="nav-links">
           <li className={`link ${page === "Dashboard" ? "active" : ""}`}>
             Dashboard
